@@ -3,4 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t react-app .
+  - docker build -t mjohnsonpqa/react-example2 .
+  - docker images mjohnsonpqa/react-example2
+
+before_deploy:
+  - docker login -u mjohnsonpqa -p founded1997 
+
+deploy:
+  provider: script
+  script: docker push mjohnsonpqa/react-example2
+  on:
+    branch: master  
