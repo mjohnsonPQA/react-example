@@ -13,4 +13,8 @@ deploy:
   provider: script
   script: docker push mjohnsonpqa/react-example2
   on:
+<<<<<<< HEAD
     branch: master  
+=======
+    branch: master
+>>>>>>> b445f93e86227df79ba29ba7fb27f0bf9ccbd510
